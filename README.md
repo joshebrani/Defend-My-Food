@@ -37,4 +37,5 @@ Defend My Food will be built using JavaScript with a main focus on Canvas.
 * Write functions to determine if a piece was hit and whether it is the 3rd time, resulting in its evaporation
 
 ## Day 4:
+* Implement a base number of 20 bad guys per round moving at a constand speed of 75px per secound and in the path of the board
 * Add in images of pieces and clean up anything that is needed
