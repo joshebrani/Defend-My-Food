@@ -1,6 +1,6 @@
 # Defend My Food
 
-## Background and Overview
+<!-- ## Background and Overview
 
 Defend My Food is a game inspired by tower defense games. You must place pieces of yours on a board to defend the swarm of "bad guys" from getting your food. 
 
@@ -38,4 +38,4 @@ Defend My Food will be built using JavaScript with a main focus on Canvas.
 
 ## Day 4:
 * Implement a base number of 20 bad guys per round moving at a constand speed of 75px per secound and in the path of the board
-* Add in images of pieces and clean up anything that is needed
+* Add in images of pieces and clean up anything that is needed -->
