@@ -1,0 +1,68 @@
+.heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    /* margin: 10px; */
+}
+
+.instructions {
+    border: 2px solid gray;
+    border-radius: 20px;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    color: rgb(59, 0, 168);
+}
+
+.instructions h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.instructions p {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.instructions ol {
+    padding: 10px;
+}
+
+.instructions ol li {
+    padding: 3px;
+}
+
+.break1 {
+    border: rgb(184, 184, 184) 1px solid;
+    margin-bottom: 10px;
+    width: 140px;
+    text-align: center;
+    position: relative;
+    left: 90px;
+}
+
+.break2 {
+    border: rgb(184, 184, 184) 1px solid;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+body {
+    background-image: url('../images/water.png');
+    background-size: contain;
+}
+
+canvas {
+    width: 900px;
+    height: 600px;
+    position: relative;
+    left: 400px;
+    bottom: 220px;
+    border: 1px solid black;
+}
