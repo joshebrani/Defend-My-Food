@@ -2,7 +2,7 @@
 
 ## Background and Overview
 
-Defend My Food is a game inspired by the tower defense game where you must place pieces of your on board to defend the swarm of "bad guys" from getting your food. 
+Defend My Food is a game inspired by tower defense games. You must place pieces of yours on a board to defend the swarm of "bad guys" from getting your food. 
 
 
 ## Functionality and MVPs
