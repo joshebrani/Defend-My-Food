@@ -12,7 +12,7 @@ In Defend my Food, the user must place his pieces on the board with a drag'n dro
 
 ## Wireframes
 
-![image](https://user-images.githubusercontent.com/75503365/113532053-71198e80-9598-11eb-8d6b-f7846da80ad3.png)
+![image](https://user-images.githubusercontent.com/75503365/113532369-2cdabe00-9599-11eb-8ad1-53b8b12c2fa9.png)
 
 
 
