@@ -53,6 +53,7 @@
 
 }
 
+
 body {
     background-image: url('../images/water.png');
     background-size: contain;
@@ -64,5 +65,27 @@ canvas {
     position: relative;
     left: 400px;
     bottom: 220px;
-    border: 1px solid black;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#ramen {
+    width: 60px;
+    position: relative;
+    bottom: 400px;
+    right: 180px;
+}
+
+.goku {
+    width: 60px;
+    position: relative;
+    bottom: 660px;
+    right: 400px;
+}
+
+.naruto {
+    width: 40px;
+    position: relative;
+    bottom: 750px;
+    right: 550px;
 }

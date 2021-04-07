@@ -19,13 +19,24 @@
         <p>Prevent the Naruto shadow clones from getting Gokus ramen noodles!</p>
                 <div class=break2></div>
         <ol>
-            <li>1. Drag'n Drop Gokus into permitted areas</li>
+            <li>1. Drag'n Drop Gokus onto the grass</li>
             <li>2. Place them where they can best defend the ramen</li>
             <li>3. Begin!</li>
         </ol>
     </div>
 
     <canvas id="canvas"></canvas>
+    <img src='./src/images//ramen1.jpg' id='ramen'>
+    <img src='./src/images//goku2.png' class='goku'>
+    <img src='./src/images//naruto.png' class='naruto'>
+    <script>
+window.onload = function() {
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("ramen");
+  ctx.drawImage(img, 90, 85, 20, 20);
+}
+</script>
 
 
     <!-- <div class='contact'>
