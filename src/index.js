@@ -76,7 +76,7 @@ canvas.addEventListener('mouseleave', function(){
         if (GOKUS[i].x === gridPostitionX && GOKUS[i].y === gridPostitionY)
         return;
       }
-      let gokuCost = 100;
+      let gokuCost = 250;
       if (MONEY >= gokuCost) {
         GOKUS.push(new Goku(gridPostitionX, gridPostitionY));
         MONEY -= gokuCost;
