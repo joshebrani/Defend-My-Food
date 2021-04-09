@@ -1,33 +1,38 @@
-import { handleGameGrid } from './board';
-import { handleGokus } from './goku';
+// import { handleGameGrid } from './board';
+// import { handleGokus } from './goku';
 
 const CELLSIZE = 50;
-const CELLGAP = 3;
-const GAMEGRID = [];
-const GOKUS = [];
-let MONEY = 1000;
 
-export function handleGameStatus() {
-  if (MONEY > 400) {
-    ctx.fillStyle = "green";
-    ctx.font = "15px Arial";
-  } else {
-    ctx.fillStyle = "red";
-    ctx.font = "15px Arial";
+
+  export function createMap(ctx) {
+    ctx.fillStyle = "#7cfc00";
+    ctx.fillRect(0, CELLSIZE, canvas.width - CELLSIZE * 4, CELLSIZE);
+
+    ctx.fillStyle = "#7cfc00";
+    ctx.fillRect(
+      canvas.width - CELLSIZE * 4,
+      CELLSIZE,
+      CELLSIZE,
+      canvas.height - CELLSIZE * 2
+    );
+
+    ctx.fillStyle = "#7cfc00";
+    ctx.fillRect(
+      CELLSIZE,
+      canvas.height - CELLSIZE * 2,
+      canvas.width - CELLSIZE * 4,
+      CELLSIZE
+    );
+
+    ctx.fillStyle = "#7cfc00";
+    ctx.fillRect(CELLSIZE, CELLSIZE * 4, CELLSIZE, CELLSIZE * 6);
+
+    ctx.fillStyle = "#7cfc00";
+    ctx.fillRect(CELLSIZE, CELLSIZE * 4, CELLSIZE * 11, CELLSIZE);
+
+    ctx.fillStyle = "#7cfc00";
+    ctx.fillRect(CELLSIZE * 11, CELLSIZE * 4, CELLSIZE, CELLSIZE * 4);
   }
-  ctx.fillText("Money: " + MONEY, 810, 30);
-}
-
-export function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "lightgray";
-  ctx.fillRect(canvas.width - CELLSIZE * 2, 0, CELLSIZE * 2, canvas.height);
-  handleGameGrid();
-  handleGokus();
-  handleGameStatus();
-  requestAnimationFrame(animate);
-}
-// animate();
 
 export function collision(first, second) {
   if (
