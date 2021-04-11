@@ -10,7 +10,6 @@ export function game(canvas, ctx) {
      const GAMEGRID = [];
      const GOKUS = [];
      const NARUTOS = [];
-     const nPosition = []
      let MONEY = 1000;
      let frame = 0
 
@@ -78,13 +77,11 @@ export function game(canvas, ctx) {
 
      function handleNarutos() {
         for (let i = 0; i < NARUTOS.length; i++) {
-            NARUTOS[i].update();
+            NARUTOS[i].move();
             NARUTOS[i].draw();
         }
         if (frame % 200 === 0) {
-            let verticalPosition = Math.floor(Math.random() * 5 + 1) * CELLSIZE
-            NARUTOS.push(new Naruto(verticalPosition))
-            nPosition.push(verticalPosition);
+            NARUTOS.push(new Naruto())
         }
      }
 
