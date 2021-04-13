@@ -67,6 +67,7 @@ export function game(canvas, ctx) {
          if (i % 5 === 0) {
            projectiles[i].shootSW();
          }
+         else {projectiles[i].shootNW();}
 
          projectiles[i].draw();
 
@@ -133,7 +134,7 @@ export function game(canvas, ctx) {
               MONEY+=100
             }
         }
-        if (frame % 100 === 0) {
+        if (frame % 200 === 0) {
             NARUTOS.push(new Naruto())
         }
      }
@@ -153,8 +154,8 @@ export function game(canvas, ctx) {
        ctx.fillText("Money: $" + MONEY, 802, 30);
        if (gameOver) {
          ctx.fillStyle = 'black';
-         ctx.font = '60px Arial';
-         ctx.fillText("Game Over", 250, 200)
+         ctx.font = '60px Fantasy';
+         ctx.fillText("Game Over", 250, 248)
        }
      }
 

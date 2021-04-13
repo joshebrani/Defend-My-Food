@@ -20,8 +20,8 @@ class Goku {
     this.ctx = this.canvas.getContext("2d");
     this.x = x;
     this.y = y;
-    this.width = CELLSIZE;
-    this.height = CELLSIZE;
+    this.width = 49;
+    this.height = 49;
     this.shooting = false;
     this.projectiles = [];
     this.timer = 0;

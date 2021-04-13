@@ -6,8 +6,8 @@ class Naruto {
         this.ctx = this.canvas.getContext("2d");
         this.x = 0;
         this.y = 0;
-        this.width = CELLSIZE;
-        this.height = CELLSIZE;
+        this.width = 49;
+        this.height = 49;
         this.speed = 1
         this.movement = this.speed;
         this.health = Math.floor(Math.random() * 400) + 50;
@@ -44,11 +44,7 @@ class Naruto {
         if (this.y === CELLSIZE*8 && this.x <= CELLSIZE*12  && this.x >= CELLSIZE*6) {
             this.x -= this.movement
         }
-        
-
-        
-        
-
+    
     }
 
     draw() {
