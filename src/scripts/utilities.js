@@ -37,10 +37,10 @@ const CELLSIZE = 50;
 export function collision(first, second) {
   if (
     !(
-      first.x > second.x + second.width ||
-      first.x + first.width < second.x ||
-      first.y > second.y + second.height ||
-      first.y + first.height < second.y
+      first.x > second.x-1 + second.width-1 ||
+      first.x + first.width-1 < second.x-1 ||
+      first.y > second.y-1 + second.height-1 ||
+      first.y + first.height-1 < second.y-1
     )
   ) {
     return true;

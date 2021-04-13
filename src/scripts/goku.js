@@ -1,4 +1,7 @@
+import Projectile from './projectile';
+
 const CELLSIZE = 50;
+export const projectiles = []
 const CELLGAP = 3;
 const GAMEGRID = [];
 const GOKUS = [];
@@ -21,8 +24,8 @@ class Goku {
     this.height = CELLSIZE;
     this.shooting = false;
     this.projectiles = [];
-    // this.timer = 0;
-    // this.health = 100
+    this.timer = 0;
+    this.health = 100
      
   }
   draw() {
@@ -30,8 +33,19 @@ class Goku {
     this.ctx.fillRect(this.x, this.y, this.width, this.height);
     this.ctx.fillStyle = "gold";
     this.ctx.font = "10px Arial";
-    // this.ctx.fillText(Math.floor(this.health), this.x + 15, this.height + 30);
+        this.ctx.fillText(
+          Math.floor(this.health) + "HP",
+          this.x + 12,
+          this.y + 10
+        );
     this.ctx.fillText("Goku", this.x + 15, this.y + 30);
+  }
+
+  shoot() {
+    this.timer++;
+    if (this.timer % 50 === 0) {
+      projectiles.push(new Projectile(this.x + 70, this.y + 25))
+    }
   }
 }
 

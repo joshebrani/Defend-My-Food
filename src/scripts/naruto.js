@@ -10,7 +10,7 @@ class Naruto {
         this.height = CELLSIZE;
         this.speed = 1
         this.movement = this.speed;
-        this.health = 100;
+        this.health = Math.floor(Math.random() * 400) + 50;
         this.maxHealth = this.health;
 
     }

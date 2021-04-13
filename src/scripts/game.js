@@ -1,8 +1,9 @@
 // import { animate } from './utilities';
 import Cell from "./board";
-import Goku from "./goku";
+import Goku, { projectiles } from "./goku";
 import Naruto from './naruto';
-import { createMap } from "./utilities";
+import Projectile from './projectile'
+import { collision, createMap } from "./utilities";
 
 export function game(canvas, ctx) {
      const CELLSIZE = 50;
@@ -11,7 +12,9 @@ export function game(canvas, ctx) {
      const GOKUS = [];
      const NARUTOS = [];
      let MONEY = 1000;
-     let frame = 0
+     let frame = 0;
+     let gameOver = false;
+    //  const projectiles = [];
 
      // mouse
      const mouse = {
@@ -50,6 +53,38 @@ export function game(canvas, ctx) {
 
      // projectiles
 
+     function handleProjectiles() {
+       for (let i = 0; i < projectiles.length; i++) {
+         if (i % 2 === 0) {
+           projectiles[i].shootNE();
+         }
+         if (i % 3 === 0) {
+           projectiles[i].shootSE();
+         }
+         if (i % i === 0 && i%2 !== 0 && i%3 !== 0) {
+           projectiles[i].shootNW();
+         }
+         if (i % 5 === 0) {
+           projectiles[i].shootSW();
+         }
+
+         projectiles[i].draw();
+
+         for (let j = 0; j < NARUTOS.length; j++) {
+           if (NARUTOS[j] && projectiles[i] && collision(projectiles[i], NARUTOS[j])) {
+             NARUTOS[j].health -= projectiles[i].power
+             projectiles.splice(i, 1);
+             i--;
+           }
+         }
+
+         if (projectiles[i] && projectiles[i].x > canvas.width - CELLSIZE) {
+           projectiles.splice(i, 1);
+           i--;
+         }
+       }
+     }
+
      // gokus
 
      canvas.addEventListener("click", function () {
@@ -70,6 +105,16 @@ export function game(canvas, ctx) {
      function handleGokus() {
        for (let i = 0; i < GOKUS.length; i++) {
          GOKUS[i].draw();
+         GOKUS[i].shoot();
+         for (let j = 0; j < NARUTOS.length; j++) {
+           if (GOKUS[i] && collision(GOKUS[i], NARUTOS[j])) {
+             GOKUS[i].health -= .2
+           }
+           if (GOKUS[i].health <= 0) {
+             GOKUS.splice(i, 1);
+             i--;
+           }
+         }
        }
      }
 
@@ -79,8 +124,16 @@ export function game(canvas, ctx) {
         for (let i = 0; i < NARUTOS.length; i++) {
             NARUTOS[i].move();
             NARUTOS[i].draw();
+            if (NARUTOS[i].x === CELLSIZE*6 && NARUTOS[i].y === CELLSIZE*8) {
+              gameOver = true
+            }
+            if (NARUTOS[i].health <= 0) {
+              NARUTOS.splice(i, 1);
+              i--;
+              MONEY+=100
+            }
         }
-        if (frame % 200 === 0) {
+        if (frame % 100 === 0) {
             NARUTOS.push(new Naruto())
         }
      }
@@ -98,6 +151,11 @@ export function game(canvas, ctx) {
          ctx.font = "15px Arial";
        }
        ctx.fillText("Money: $" + MONEY, 802, 30);
+       if (gameOver) {
+         ctx.fillStyle = 'black';
+         ctx.font = '60px Arial';
+         ctx.fillText("Game Over", 250, 200)
+       }
      }
 
      function animate() {
@@ -113,10 +171,11 @@ export function game(canvas, ctx) {
        createMap(ctx);
        handleGameGrid();
        handleGokus();
+       handleProjectiles();
        handleNarutos();
        handleGameStatus(ctx);
        frame++;       
-       requestAnimationFrame(animate);
+       if (!gameOver) requestAnimationFrame(animate);
      }
      animate();
 }
