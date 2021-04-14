@@ -93,3 +93,34 @@ canvas {
     bottom: 750px;
     right: 550px;
 }
+
+.social {
+    position: absolute;
+    left: 85%;
+    bottom: 53%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    border-radius: 20px;
+    width: 150px;
+    padding: 20px;
+    margin: 10px;
+    color: rgb(59, 0, 168);
+    font-family: fantasy;
+    font-size: 19px;
+}
+
+.social p {
+    padding-bottom: 10px;
+}
+
+a {
+    width: 100px;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: azure;
+    border-radius: 10px;
+}

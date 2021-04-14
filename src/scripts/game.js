@@ -55,13 +55,13 @@ export function game(canvas, ctx) {
 
      function handleProjectiles() {
        for (let i = 0; i < projectiles.length; i++) {
-         if (i % 2 === 0) {
+         if (i % 2 === 0 && i%4 !== 0 && i%5 !== 0) {
            projectiles[i].shootNE();
          }
          if (i % 3 === 0) {
            projectiles[i].shootSE();
          }
-         if (i % i === 0 && i%2 !== 0 && i%3 !== 0) {
+         if (i%4 == 0) {
            projectiles[i].shootNW();
          }
          if (i % 5 === 0) {
