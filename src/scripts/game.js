@@ -109,12 +109,12 @@ export function game(canvas, ctx) {
          GOKUS[i].shoot();
          for (let j = 0; j < NARUTOS.length; j++) {
            if (GOKUS[i] && collision(GOKUS[i], NARUTOS[j])) {
-             GOKUS[i].health -= .2
+             MONEY -= .05
            }
-           if (GOKUS[i].health <= 0) {
-             GOKUS.splice(i, 1);
-             i--;
-           }
+          //  if (GOKUS[i].health < 0) {
+          //    GOKUS.splice(i, 1);
+          //    i--;
+          //  }
          }
        }
      }
