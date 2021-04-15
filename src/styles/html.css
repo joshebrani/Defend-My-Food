@@ -89,7 +89,8 @@ canvas {
 
 .naruto {
     width: 50px;
-    position: absolute;
+    position: relative;
+    bottom: 1000px;
     right: 700px;
 }
 
