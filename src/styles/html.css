@@ -74,24 +74,24 @@ canvas {
 }
 
 #ramen {
-    width: 60px;
+    width: 80px;
     position: relative;
-    bottom: 400px;
-    right: 180px;
+    bottom: 605px;
+    right: 215px;
 }
 
 .goku {
-    width: 60px;
+    width: 70px;
     position: relative;
-    bottom: 660px;
-    right: 400px;
+    bottom: 605px;
+    right: 240px;
 }
 
 .naruto {
-    width: 40px;
+    width: 50px;
     position: relative;
-    bottom: 750px;
-    right: 550px;
+    bottom: 1000px;
+    right: 700px;
 }
 
 .social {
