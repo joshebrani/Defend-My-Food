@@ -7,7 +7,6 @@ import { collision, createMap } from "./utilities";
 
 export function game(canvas, ctx) {
      const CELLSIZE = 50;
-     const CELLGAP = 3;
      const GAMEGRID = [];
      const GOKUS = [];
      const NARUTOS = [];

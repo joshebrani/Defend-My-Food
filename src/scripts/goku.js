@@ -2,7 +2,6 @@ import Projectile from './projectile';
 
 const CELLSIZE = 50;
 export const projectiles = []
-const CELLGAP = 3;
 const GAMEGRID = [];
 const GOKUS = [];
 let MONEY = 1000;
@@ -31,6 +30,8 @@ class Goku {
   draw() {
     this.ctx.fillStyle = "blue";
     this.ctx.fillRect(this.x, this.y, this.width, this.height);
+    this.ctx.fillStyle = "yellow";
+    this.ctx.fillRect(this.x, this.y, this.width, this.height-35);
     this.ctx.fillStyle = "gold";
     this.ctx.font = "10px Arial";
     //     this.ctx.fillText(
