@@ -5,6 +5,7 @@ import Naruto from './naruto';
 import Projectile from './projectile'
 import { collision, createMap } from "./utilities";
 
+export let killCount = 0;
 export function game(canvas, ctx) {
      const CELLSIZE = 50;
      const GAMEGRID = [];
@@ -131,6 +132,7 @@ export function game(canvas, ctx) {
               NARUTOS.splice(i, 1);
               i--;
               MONEY+=100
+              killCount+=1
             }
         }
         if (frame % 200 === 0) {
@@ -145,10 +147,10 @@ export function game(canvas, ctx) {
      function handleGameStatus() {
        if (MONEY > 400) {
          ctx.fillStyle = "green";
-         ctx.font = "15px Arial";
+         ctx.font = "15px Fantasy";
        } else {
          ctx.fillStyle = "red";
-         ctx.font = "15px Arial";
+         ctx.font = "15px Fantasy";
        }
        ctx.fillText("Money: $" + MONEY, 802, 30);
        if (gameOver) {
@@ -156,6 +158,9 @@ export function game(canvas, ctx) {
          ctx.font = '60px Fantasy';
          ctx.fillText("Game Over", 250, 248)
        }
+        ctx.fillStyle = "red";
+        ctx.font = "15px Fantasy";
+        ctx.fillText("Kill Count: " + killCount, 802, 60);
      }
 
      function animate() {

@@ -1,5 +1,5 @@
 const CELLSIZE = 50;
-
+import { killCount } from './game';
 // const runRight = new Image();
 // runRight.src = '../src/images/run_1.png';
 
@@ -11,9 +11,34 @@ class Naruto {
         this.y = 0;
         this.width = 49;
         this.height = 49;
-        this.speed = 1
+        if (killCount < 15) {
+            this.speed = 1;
+            this.health = Math.floor(Math.random() * 300) + 50;
+        }
+        if (killCount >= 15 && killCount < 30) {
+            this.speed = 1;
+            this.health = Math.floor(Math.random() * 900) + 50;
+        }
+        if (killCount >= 30 && killCount < 90) {
+            this.speed = 2;
+            this.health = Math.floor(Math.random() * 1500) + 50;
+        } 
+        if (killCount >= 90 && killCount < 150) {
+          this.speed = 3;
+          this.health = Math.floor(Math.random() * 7000) + 50;
+        } 
+        if (killCount >= 150) {
+            this.speed = 6;
+            this.health = Math.floor(Math.random() * 20000) + 50;
+        } 
+        
+        // else {
+        //     this.speed = 1;
+        //     this.health = Math.floor(Math.random() * 300) + 50;
+
+        // }
         this.movement = this.speed;
-        this.health = Math.floor(Math.random() * 400) + 50;
+        // this.health = Math.floor(Math.random() * 400) + 50;
         this.maxHealth = this.health;
         // this.runRight = runRight;
         // this.frameX = 0;
@@ -22,7 +47,7 @@ class Naruto {
         // this.maxFrame = 4;
         // this.spriteWidth = 90;
         // this.spriteHeight = 117
-
+        
     }
 
     move() {
