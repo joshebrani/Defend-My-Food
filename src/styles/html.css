@@ -1,10 +1,18 @@
 .heading {
-    font-size: 50px;
+    /* font-size: 50px;
     font-weight: bold;
     color: rgb(59, 0, 168);
     text-align: center;
-    padding: 10px;
+    padding: 10px; */
     /* margin: 10px; */
+
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(59, 0, 168);
+    /* text-align: center; */
+    margin-left: 600px;
+    padding: 10px;
+    /* margin: 10px;
 }
 
 .instructions {
