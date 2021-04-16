@@ -10,6 +10,7 @@ class Projectile {
         this.height = 15;
         this.power = 25;
         this.speed = 7;
+         this.img = document.getElementById("kame");
     }
 
     shootNE() {
@@ -31,10 +32,12 @@ class Projectile {
 
 
     draw() {
-        this.ctx.fillStyle = 'aqua';
-        this.ctx.beginPath();
-        this.ctx.arc(this.x, this.y, this.width, 0 , Math.PI*2);
-        this.ctx.fill();
+        this.ctx.drawImage(this.img, this.x, this.y, this.width+15, this.height+15);
+
+        // this.ctx.fillStyle = 'aqua';
+        // this.ctx.beginPath();
+        // this.ctx.arc(this.x, this.y, this.width, 0 , Math.PI*2);
+        // this.ctx.fill();
     }
 }
 

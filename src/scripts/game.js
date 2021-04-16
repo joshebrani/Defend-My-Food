@@ -146,7 +146,7 @@ export function game(canvas, ctx) {
      // utilities
 
      function handleGameStatus() {
-       if (MONEY > 400) {
+       if (MONEY >= 250) {
          ctx.fillStyle = "green";
          ctx.font = "15px Fantasy";
        } else {

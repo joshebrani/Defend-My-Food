@@ -16,6 +16,7 @@
     color: rgb(59, 0, 168);
     font-family: fantasy;
     font-weight: unset;
+    background-color: beige;
 }
 
 .instructions h1 {
@@ -99,7 +100,11 @@ canvas {
 }
 
 .naruto1 {
-    width: 1px
+    width: 1px;
+}
+
+.kame {
+    width: 1px;
 }
 
 .social {
@@ -116,6 +121,8 @@ canvas {
     color: rgb(59, 0, 168);
     font-family: fantasy;
     font-size: 19px;
+    background-color: beige;
+
 }
 
 .social p {
