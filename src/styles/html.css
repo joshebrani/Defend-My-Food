@@ -10,9 +10,10 @@
     font-weight: bold;
     color: rgb(59, 0, 168);
     /* text-align: center; */
-    margin-left: 600px;
     padding: 10px;
-    /* margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 600px;
 }
 
 .instructions {
