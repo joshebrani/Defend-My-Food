@@ -21,7 +21,7 @@ class Naruto {
         }
         if (killCount >= 30 && killCount < 90) {
             this.speed = 2;
-            this.health = Math.floor(Math.random() * 1500) + 50;
+            this.health = Math.floor(Math.random() * 1200) + 50;
         } 
         if (killCount >= 90 && killCount < 150) {
           this.speed = 3;
@@ -31,15 +31,11 @@ class Naruto {
             this.speed = 6;
             this.health = Math.floor(Math.random() * 20000) + 50;
         } 
-        
-        // else {
-        //     this.speed = 1;
-        //     this.health = Math.floor(Math.random() * 300) + 50;
-
-        // }
         this.movement = this.speed;
         // this.health = Math.floor(Math.random() * 400) + 50;
         this.maxHealth = this.health;
+        this.img = document.getElementById("naruto1");
+
         // this.runRight = runRight;
         // this.frameX = 0;
         // this.frameY = 0;
@@ -86,14 +82,15 @@ class Naruto {
     }
 
     draw() {
-        this.ctx.fillStyle = "black";
-        this.ctx.fillRect(this.x, this.y, this.width, this.height);
-        this.ctx.fillStyle = "gray";
-        this.ctx.fillRect(this.x, this.y, this.width, this.height-35);
-        this.ctx.fillStyle = "orange";
+        this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+        // this.ctx.fillStyle = "black";
+        // this.ctx.fillRect(this.x, this.y, this.width, this.height);
+        // this.ctx.fillStyle = "gray";
+        // this.ctx.fillRect(this.x, this.y, this.width, this.height-35);
+        this.ctx.fillStyle = "blue";
         this.ctx.font = "10px Arial";
-        this.ctx.fillText(Math.floor(this.health)+"HP", this.x + 12, this.y + 10);
-        this.ctx.fillText("Naruto", this.x + 12, this.y + 30);
+        this.ctx.fillText(Math.floor(this.health)+"HP", this.x + 5, this.y + 60);
+        // this.ctx.fillText("Naruto", this.x + 12, this.y + 30);
         // this.ctx.drawImage(this.runRight, this.frameX*this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
     }
 }

@@ -5,6 +5,7 @@ export const projectiles = []
 const GAMEGRID = [];
 const GOKUS = [];
 let MONEY = 1000;
+// const img = document.getElementById('goku');
 
 const mouse = {
   x: undefined,
@@ -24,22 +25,24 @@ class Goku {
     this.shooting = false;
     this.projectiles = [];
     this.timer = 0;
+    this.img = document.getElementById("goku2");
     // this.health = 100
      
   }
   draw() {
-    this.ctx.fillStyle = "blue";
-    this.ctx.fillRect(this.x, this.y, this.width, this.height);
-    this.ctx.fillStyle = "yellow";
-    this.ctx.fillRect(this.x, this.y, this.width, this.height-35);
-    this.ctx.fillStyle = "gold";
-    this.ctx.font = "10px Arial";
-    //     this.ctx.fillText(
-    //       Math.floor(this.health) + "HP",
-    //       this.x + 12,
-    //       this.y + 10
-    //     );
-    this.ctx.fillText("Goku", this.x + 15, this.y + 30);
+    this.ctx.drawImage(this.img, this.x+8, this.y,this.width-10, this.height)
+    // this.ctx.fillStyle = "blue";
+    // this.ctx.fillRect(this.x, this.y, this.width, this.height);
+    // this.ctx.fillStyle = "yellow";
+    // this.ctx.fillRect(this.x, this.y, this.width, this.height-35);
+    // this.ctx.fillStyle = "gold";
+    // this.ctx.font = "10px Arial";
+    // //     this.ctx.fillText(
+    // //       Math.floor(this.health) + "HP",
+    // //       this.x + 12,
+    // //       this.y + 10
+    // //     );
+    // this.ctx.fillText("Goku", this.x + 15, this.y + 30);
   }
 
   shoot() {

@@ -65,7 +65,7 @@ canvas {
     height: 600px;
     position: relative;
     left: 400px;
-    bottom: 450px;
+    bottom: 550px;
     border: 2px solid black;
     border-radius: 10px;
     /* background-color: white; */
@@ -76,22 +76,30 @@ canvas {
 #ramen {
     width: 80px;
     position: relative;
-    bottom: 605px;
-    right: 215px;
+    bottom: 700px;
+    right: 220px;
 }
 
 .goku {
     width: 70px;
     position: relative;
-    bottom: 605px;
-    right: 240px;
+    bottom: 700px;
+    right: 245px;
 }
 
 .naruto {
     width: 50px;
     position: relative;
-    bottom: 1000px;
+    bottom: 1100px;
     right: 700px;
+}
+
+.goku2 {
+    width: 1px;
+}
+
+.naruto1 {
+    width: 1px
 }
 
 .social {

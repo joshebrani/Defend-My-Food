@@ -6,6 +6,7 @@ import Projectile from './projectile'
 import { collision, createMap } from "./utilities";
 
 export let killCount = 0;
+
 export function game(canvas, ctx) {
      const CELLSIZE = 50;
      const GAMEGRID = [];
