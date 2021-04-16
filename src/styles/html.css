@@ -12,7 +12,8 @@
     border-radius: 20px;
     width: 300px;
     padding: 20px;
-    margin: 10px;
+    margin-left: 70px;
+    /* margin: 10px; */
     color: rgb(59, 0, 168);
     font-family: fantasy;
     font-weight: unset;
@@ -65,8 +66,8 @@ canvas {
     width: 900px;
     height: 600px;
     position: relative;
-    left: 400px;
-    bottom: 550px;
+    left: 480px;
+    bottom: 520px;
     border: 2px solid black;
     border-radius: 10px;
     /* background-color: white; */
@@ -75,24 +76,27 @@ canvas {
 }
 
 #ramen {
-    width: 80px;
+    /* width: 80px;
     position: relative;
     bottom: 700px;
-    right: 220px;
+    right: 220px; */
+    width: 1px;
 }
 
 .goku {
-    width: 70px;
+    /* width: 70px;
     position: relative;
     bottom: 700px;
-    right: 245px;
+    right: 245px; */
+    width: 1px;
 }
 
 .naruto {
-    width: 50px;
+    /* width: 50px;
     position: relative;
     bottom: 1100px;
-    right: 700px;
+    right: 700px; */
+    width: 1px;
 }
 
 .goku2 {
@@ -109,8 +113,9 @@ canvas {
 
 .social {
     position: absolute;
-    left: 85%;
-    bottom: 53%;
+    /* left: 85%; */
+    left: 8%;
+    /* bottom: 53%; */
     display: flex;
     flex-direction: column;
     border: 2px solid gray;
@@ -136,6 +141,6 @@ a {
 }
 
 a:hover {
-    background-color: azure;
+    background-color: #d3f4ff;;
     border-radius: 10px;
 }

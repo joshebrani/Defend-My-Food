@@ -8,6 +8,11 @@ import { collision, createMap } from "./utilities";
 export let killCount = 0;
 
 export function game(canvas, ctx) {
+  const ramen = document.getElementById('ramen')
+  const goku = document.getElementById('goku')
+  const naruto = document.getElementById('naruto')
+  const goku2 = document.getElementById('goku2')
+
      const CELLSIZE = 50;
      const GAMEGRID = [];
      const GOKUS = [];
@@ -162,6 +167,35 @@ export function game(canvas, ctx) {
         ctx.fillStyle = "red";
         ctx.font = "15px Fantasy";
         ctx.fillText("Kill Count: " + killCount, 802, 60);
+
+        ctx.drawImage(
+          ramen,
+          CELLSIZE*6,
+          CELLSIZE*8,
+          70,
+          50
+        );
+        ctx.drawImage(
+          goku,
+          CELLSIZE*6 + 50,
+          CELLSIZE*8 -20,
+          70,
+          70
+        );
+        ctx.drawImage(
+          naruto,
+          0,
+          0,
+          50,
+          50
+        );
+        ctx.drawImage(
+          goku2,
+          830,
+          300,
+          39,
+          49
+        );
      }
 
      function animate() {

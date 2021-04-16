@@ -17,19 +17,23 @@ class Naruto {
         }
         if (killCount >= 15 && killCount < 30) {
             this.speed = 1;
-            this.health = Math.floor(Math.random() * 900) + 50;
+            this.health = Math.floor(Math.random() * 900) + 30;
         }
-        if (killCount >= 30 && killCount < 90) {
+        if (killCount >= 30 && killCount < 50) {
             this.speed = 2;
-            this.health = Math.floor(Math.random() * 1200) + 50;
+            this.health = Math.floor(Math.random() * 1200) + 900;
+        } 
+        if (killCount >= 50 && killCount < 90) {
+            this.speed = 2;
+            this.health = Math.floor(Math.random() * 2500) + 1200;
         } 
         if (killCount >= 90 && killCount < 150) {
           this.speed = 3;
-          this.health = Math.floor(Math.random() * 7000) + 50;
+          this.health = Math.floor(Math.random() * 5000) + 2500;
         } 
         if (killCount >= 150) {
             this.speed = 6;
-            this.health = Math.floor(Math.random() * 20000) + 50;
+            this.health = Math.floor(Math.random() * 20000) + 5000;
         } 
         this.movement = this.speed;
         // this.health = Math.floor(Math.random() * 400) + 50;
