@@ -11,7 +11,11 @@ class Naruto {
         this.y = 0;
         this.width = 49;
         this.height = 49;
-        if (killCount < 15) {
+        if (killCount < 8) {
+            this.speed = 1;
+            this.health = Math.floor(Math.random() * 50) + 25;
+        }
+        if (killCount >= 8 && killCount < 15) {
             this.speed = 1;
             this.health = Math.floor(Math.random() * 300) + 50;
         }
@@ -20,16 +24,16 @@ class Naruto {
             this.health = Math.floor(Math.random() * 900) + 30;
         }
         if (killCount >= 30 && killCount < 50) {
-            this.speed = 2;
+            this.speed = 1;
             this.health = Math.floor(Math.random() * 1200) + 900;
         } 
         if (killCount >= 50 && killCount < 90) {
-            this.speed = 2;
-            this.health = Math.floor(Math.random() * 2500) + 1200;
+            this.speed = 1;
+            this.health = Math.floor(Math.random() * 1500) + 1200;
         } 
         if (killCount >= 90 && killCount < 150) {
-          this.speed = 3;
-          this.health = Math.floor(Math.random() * 5000) + 2500;
+          this.speed = 2;
+          this.health = Math.floor(Math.random() * 3000) + 2500;
         } 
         if (killCount >= 150) {
             this.speed = 6;
@@ -86,6 +90,8 @@ class Naruto {
     }
 
     draw() {
+         this.ctx.shadowColor = "red";
+         this.ctx.shadowBlur = 15;
         this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
         // this.ctx.fillStyle = "black";
         // this.ctx.fillRect(this.x, this.y, this.width, this.height);

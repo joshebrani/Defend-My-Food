@@ -120,6 +120,10 @@ canvas {
     width: 1px;
 }
 
+.start {
+    width: 1px;
+}
+
 .social {
     /* position: absolute; */
     /* left: 85%; */

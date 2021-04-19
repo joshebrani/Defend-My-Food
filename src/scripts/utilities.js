@@ -5,6 +5,8 @@ const CELLSIZE = 50;
 
 
   export function createMap(ctx) {
+    ctx.shadowColor = "#7cfc00";
+    ctx.shadowBlur = 10;
     ctx.fillStyle = "#7cfc00";
     ctx.fillRect(0, CELLSIZE, canvas.width - CELLSIZE * 4, CELLSIZE);
 

@@ -12,12 +12,13 @@ export function game(canvas, ctx) {
   const goku = document.getElementById('goku')
   const naruto = document.getElementById('naruto')
   const goku2 = document.getElementById('goku2')
+  const start = document.getElementById('start')
 
      const CELLSIZE = 50;
      const GAMEGRID = [];
      const GOKUS = [];
      const NARUTOS = [];
-     let MONEY = 1000;
+     let MONEY = 300;
      let frame = 0;
      let gameOver = false;
     //  const projectiles = [];
@@ -106,6 +107,7 @@ export function game(canvas, ctx) {
        if (MONEY >= gokuCost) {
          GOKUS.push(new Goku(gridPostitionX, gridPostitionY));
          MONEY -= gokuCost;
+         if (NARUTOS.length <= 0) animateNarutos()
        }
      });
 
@@ -151,6 +153,8 @@ export function game(canvas, ctx) {
      // utilities
 
      function handleGameStatus() {
+        ctx.shadowColor = "green";
+        ctx.shadowBlur = 15;
        if (MONEY >= 250) {
          ctx.fillStyle = "green";
          ctx.font = "15px Fantasy";
@@ -168,6 +172,8 @@ export function game(canvas, ctx) {
         ctx.font = "15px Fantasy";
         ctx.fillText("Kill Count: " + killCount, 802, 60);
 
+        ctx.shadowColor = "white";
+        ctx.shadowBlur = 15;
         ctx.drawImage(
           ramen,
           CELLSIZE*6,
@@ -175,6 +181,8 @@ export function game(canvas, ctx) {
           70,
           50
         );
+        ctx.shadowColor = "orange";
+        ctx.shadowBlur = 5;
         ctx.drawImage(
           goku,
           CELLSIZE*6 + 50,
@@ -182,6 +190,8 @@ export function game(canvas, ctx) {
           70,
           70
         );
+        ctx.shadowColor = "red";
+        ctx.shadowBlur = 15;
         ctx.drawImage(
           naruto,
           0,
@@ -189,6 +199,8 @@ export function game(canvas, ctx) {
           50,
           50
         );
+        ctx.shadowColor = "aqua";
+        ctx.shadowBlur = 15;
         ctx.drawImage(
           goku2,
           830,
@@ -196,28 +208,38 @@ export function game(canvas, ctx) {
           39,
           49
         );
+        // ctx.drawImage(start, 809, 500, 80, 37);
      }
 
+     function animateNarutos() {
+        handleNarutos();
+        if (!gameOver) requestAnimationFrame(animateNarutos);
+     }
+     
+     
      function animate() {
        ctx.clearRect(0, 0, canvas.width, canvas.height);
+       ctx.shadowColor = "black";
+       ctx.shadowBlur = 10;
        ctx.fillStyle = "lightgray";
        ctx.fillRect(
          canvas.width - CELLSIZE * 2,
          0,
          CELLSIZE * 2,
          canvas.height
-       );
-
-       createMap(ctx);
-       handleGameGrid();
-       handleGokus();
-       handleProjectiles();
-       handleNarutos();
-       handleGameStatus(ctx);
-       frame++;       
+         );
+         
+         createMap(ctx);
+         handleGameGrid();
+         handleGokus();
+         handleProjectiles();
+        //  handleNarutos();
+         handleGameStatus(ctx);
+         frame++;       
        if (!gameOver) requestAnimationFrame(animate);
      }
      animate();
+    //  animateNarutos();
 }
 
 

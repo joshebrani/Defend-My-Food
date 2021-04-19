@@ -32,6 +32,8 @@ class Projectile {
 
 
     draw() {
+         this.ctx.shadowColor = "aqua";
+         this.ctx.shadowBlur = 15;
         this.ctx.drawImage(this.img, this.x-20, this.y+20, this.width+20, this.height+20);
 
         // this.ctx.fillStyle = 'aqua';

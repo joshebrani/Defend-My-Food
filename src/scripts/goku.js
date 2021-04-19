@@ -30,6 +30,8 @@ class Goku {
      
   }
   draw() {
+     this.ctx.shadowColor = "aqua";
+     this.ctx.shadowBlur = 15;
     this.ctx.drawImage(this.img, this.x+8, this.y,this.width-10, this.height)
     // this.ctx.fillStyle = "blue";
     // this.ctx.fillRect(this.x, this.y, this.width, this.height);
