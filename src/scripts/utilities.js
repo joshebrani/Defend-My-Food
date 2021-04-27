@@ -37,14 +37,20 @@ const CELLSIZE = 50;
   }
 
 export function collision(first, second) {
-  if (
-    !(
-      first.x > second.x + second.width ||
-      first.x + first.width < second.x ||
-      first.y > second.y + second.height ||
-      first.y + first.height < second.y
-    )
-  ) {
-    return true;
-  }
+  // if (
+  //   !(
+  //     first.x > second.x + second.width ||
+  //     first.x + first.width < second.x ||
+  //     first.y > second.y + second.height ||
+  //     first.y + first.height < second.y
+  //   )
+  // ) {
+  //   return true;
+  // }
+  return (
+    first.x < second.x + second.width &&
+    first.x + first.width > second.x &&
+    first.y < second.y + second.height &&
+    first.y + first.height > second.y
+  ) 
 }
