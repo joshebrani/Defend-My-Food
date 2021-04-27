@@ -27,6 +27,7 @@
     font-family: sans-serif;
     font-weight: unset;
     background-color: beige;
+    position: absolute;
 }
 
 .instructions h1 {
@@ -69,6 +70,7 @@
 body {
     background-image: url('../images/water.png');
     background-size: auto;
+    width: min-content;
 }
 
 canvas {
@@ -76,7 +78,7 @@ canvas {
     height: 600px;
     position: relative;
     left: 460px;
-    bottom: 815px;
+    bottom: 200px;
     border: 2px solid black;
     border-radius: 10px;
     /* background-color: white; */
@@ -142,6 +144,8 @@ canvas {
     margin-left: 140px;
     width: 300px;
     margin-left: 70px;
+    position: relative;
+    top: 600px;
 
 
 }
