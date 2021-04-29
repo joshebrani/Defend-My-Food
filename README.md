@@ -1,5 +1,11 @@
 # Defend My Food
 
+* Tower Defense Game where players must place their defenders on the board to protect the ramen from attackers.
+
+[Live Site](https://joshebrani.github.io/Defend-My-Food/)
+
+screen-capture (1).webm
+
 <!-- ## Background and Overview
 
 Defend My Food is a game inspired by tower defense games. You must place pieces of yours on a board to defend the swarm of "bad guys" from getting your food. 
