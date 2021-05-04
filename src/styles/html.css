@@ -157,11 +157,16 @@ canvas {
 
 a {
     width: 100px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     padding: 5px;
 }
 
 a:hover {
     background-color: #d3f4ff;;
     border-radius: 10px;
+}
+
+.name {
+    font-family: cursive;
+    padding: 0;
 }
