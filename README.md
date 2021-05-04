@@ -4,7 +4,7 @@
 
 [Live Site](https://joshebrani.github.io/Defend-My-Food/)
 
-screen-capture (1).webm
+![Alt Text](https://media.giphy.com/media/riMEEvjevjXddW0tZG/giphy.gif)
 
 <!-- ## Background and Overview
 
