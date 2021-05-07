@@ -68,9 +68,9 @@
 
 
 body {
-    background-image: url('../images/water.png');
-    background-size: auto;
+    background-image: url(../images/water.png);
     width: min-content;
+    background-size: cover;
 }
 
 canvas {
@@ -78,7 +78,7 @@ canvas {
     height: 600px;
     position: relative;
     left: 460px;
-    bottom: 200px;
+    bottom: 240px;
     border: 2px solid black;
     border-radius: 10px;
     /* background-color: white; */
@@ -145,7 +145,7 @@ canvas {
     width: 300px;
     margin-left: 70px;
     position: relative;
-    top: 600px;
+    top: 550px;
 
 
 }
@@ -169,4 +169,9 @@ a:hover {
 .name {
     font-family: cursive;
     padding: 0;
+}
+
+.instsoc {
+    position: relative;
+    bottom: 60px;
 }
