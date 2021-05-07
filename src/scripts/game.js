@@ -75,6 +75,21 @@ export function game(canvas, ctx) {
            projectiles[i].shootSW();
          }
          else {projectiles[i].shootNW();}
+// console.log(i)
+        // if (i == 0) {
+        //   projectiles[i].shootNW();
+        // }
+        // if (i == 1) {
+        //   projectiles[i].shootNE();
+        // }
+        // if (i == 2) {
+        //   projectiles[i].shootSE();
+        // }
+        // if (i == 3) {
+        //   projectiles[i].shootSW();
+        // }
+
+        // else { projectiles[i].shootNW()}
 
          projectiles[i].draw();
 
