@@ -13,11 +13,11 @@ class Naruto {
         this.height = 49;
         if (killCount < 8) {
             this.speed = 1;
-            this.health = Math.floor(Math.random() * 10000) + 25;
+            this.health = Math.floor(Math.random() * 50) + 25;
         }
         if (killCount >= 8 && killCount < 15) {
             this.speed = 1;
-            this.health = Math.floor(Math.random() * 300) + 50;
+            this.health = Math.floor(Math.random() * 10000) + 50;
         }
         if (killCount >= 15 && killCount < 30) {
             this.speed = 1;
