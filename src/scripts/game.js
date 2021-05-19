@@ -12,7 +12,11 @@ export function game(canvas, ctx) {
   const goku = document.getElementById('goku')
   const naruto = document.getElementById('naruto')
   const goku2 = document.getElementById('goku2')
-  const start = document.getElementById('start')
+  // const start = document.getElementById('start')
+  const itachi = document.getElementById('itachi')
+  const shenron = document.getElementById('shenron')
+  const broly = document.getElementById('broly')
+  const coming = document.getElementById('coming')
 
      const CELLSIZE = 50;
      const GAMEGRID = [];
@@ -219,11 +223,18 @@ export function game(canvas, ctx) {
         ctx.drawImage(
           goku2,
           830,
-          300,
+          250,
           39,
           49
         );
-        // ctx.drawImage(start, 809, 500, 80, 37);
+
+        ctx.shadowBlur = 0
+        
+        ctx.drawImage(coming, 809, 350, 80, 37);
+
+        ctx.drawImage(itachi, 803, 415, 40, 40);
+        ctx.drawImage(broly, 853, 415, 40, 40);
+        ctx.drawImage(shenron, 809, 480, 80, 50);
      }
 
      function animateNarutos() {
