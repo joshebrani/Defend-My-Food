@@ -1,10 +1,23 @@
 # Defend My Food
 
-* Tower Defense Game where players must place their defenders on the board to protect the ramen from attackers.
+* Tower Defense Game where players must place their defenders on the board with a click of the mouse (or tap on a phone) to protect the ramen from attackers.
 
 [Live Site](https://joshebrani.github.io/Defend-My-Food/)
 
 ![Alt Text](https://media.giphy.com/media/riMEEvjevjXddW0tZG/giphy.gif)
+
+## Teachnologies Used
+
+* Canvas
+* JavaScript
+* Webpack
+* HTML
+* CSS
+
+
+## Brief Overview
+
+Defend My Food, hosted on github, uses the Canvas API to create a game board where the game is played, with instructions and background styling done using HTML and CSS.
 
 <!-- ## Background and Overview
 
