@@ -10,7 +10,7 @@ const CELLSIZE = 50;
     ctx.fillStyle = "#7cfc00";
     ctx.fillRect(0, CELLSIZE, canvas.width - CELLSIZE * 4, CELLSIZE);
 
-    ctx.fillStyle = "#7cfc00";
+    // ctx.fillStyle = "#7cfc00";
     ctx.fillRect(
       canvas.width - CELLSIZE * 4,
       CELLSIZE,
@@ -18,7 +18,7 @@ const CELLSIZE = 50;
       canvas.height - CELLSIZE * 2
     );
 
-    ctx.fillStyle = "#7cfc00";
+    // ctx.fillStyle = "#7cfc00";
     ctx.fillRect(
       CELLSIZE,
       canvas.height - CELLSIZE * 2,
@@ -26,13 +26,13 @@ const CELLSIZE = 50;
       CELLSIZE
     );
 
-    ctx.fillStyle = "#7cfc00";
+    // ctx.fillStyle = "#7cfc00";
     ctx.fillRect(CELLSIZE, CELLSIZE * 4, CELLSIZE, CELLSIZE * 6);
 
-    ctx.fillStyle = "#7cfc00";
+    // ctx.fillStyle = "#7cfc00";
     ctx.fillRect(CELLSIZE, CELLSIZE * 4, CELLSIZE * 11, CELLSIZE);
 
-    ctx.fillStyle = "#7cfc00";
+    // ctx.fillStyle = "#7cfc00";
     ctx.fillRect(CELLSIZE * 11, CELLSIZE * 4, CELLSIZE, CELLSIZE * 4);
   }
 

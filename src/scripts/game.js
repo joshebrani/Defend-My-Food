@@ -230,11 +230,11 @@ export function game(canvas, ctx) {
 
         ctx.shadowBlur = 0
         
-        ctx.drawImage(coming, 809, 350, 80, 37);
+        ctx.drawImage(coming, 809, 360, 80, 37);
 
-        ctx.drawImage(itachi, 803, 415, 40, 40);
-        ctx.drawImage(broly, 853, 415, 40, 40);
-        ctx.drawImage(shenron, 809, 480, 80, 50);
+        ctx.drawImage(itachi, 803, 415, 40, 50);
+        ctx.drawImage(broly, 853, 415, 40, 50);
+        ctx.drawImage(shenron, 809, 490, 80, 50);
      }
 
      function animateNarutos() {

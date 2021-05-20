@@ -83,6 +83,7 @@ canvas {
     border-radius: 10px;
     /* background-color: white; */
     background-image: url('../images/desert.jpeg');
+    cursor: pointer;
     
 }
 
