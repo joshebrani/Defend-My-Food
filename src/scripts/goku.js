@@ -30,21 +30,9 @@ class Goku {
      
   }
   draw() {
-     this.ctx.shadowColor = "aqua";
-     this.ctx.shadowBlur = 15;
+    this.ctx.shadowColor = "aqua";
+    this.ctx.shadowBlur = 15;
     this.ctx.drawImage(this.img, this.x+8, this.y,this.width-10, this.height)
-    // this.ctx.fillStyle = "blue";
-    // this.ctx.fillRect(this.x, this.y, this.width, this.height);
-    // this.ctx.fillStyle = "yellow";
-    // this.ctx.fillRect(this.x, this.y, this.width, this.height-35);
-    // this.ctx.fillStyle = "gold";
-    // this.ctx.font = "10px Arial";
-    // //     this.ctx.fillText(
-    // //       Math.floor(this.health) + "HP",
-    // //       this.x + 12,
-    // //       this.y + 10
-    // //     );
-    // this.ctx.fillText("Goku", this.x + 15, this.y + 30);
   }
 
   shoot() {

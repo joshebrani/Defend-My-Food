@@ -93,15 +93,10 @@ class Naruto {
          this.ctx.shadowColor = "red";
          this.ctx.shadowBlur = 15;
         this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
-        // this.ctx.fillStyle = "black";
-        // this.ctx.fillRect(this.x, this.y, this.width, this.height);
-        // this.ctx.fillStyle = "gray";
-        // this.ctx.fillRect(this.x, this.y, this.width, this.height-35);
+
         this.ctx.fillStyle = "blue";
         this.ctx.font = "10px Arial";
         this.ctx.fillText(Math.floor(this.health)+"HP", this.x + 5, this.y + 60);
-        // this.ctx.fillText("Naruto", this.x + 12, this.y + 30);
-        // this.ctx.drawImage(this.runRight, this.frameX*this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
     }
 }
 
