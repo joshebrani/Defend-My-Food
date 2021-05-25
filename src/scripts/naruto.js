@@ -36,7 +36,7 @@ class Naruto {
           this.health = Math.floor(Math.random() * 2000) + 1500;
         } 
         if (killCount >= 150) {
-            this.speed = 3;
+            this.speed = 2;
             this.health = Math.floor(Math.random() * 10000) + 5000;
         } 
         this.movement = this.speed;
