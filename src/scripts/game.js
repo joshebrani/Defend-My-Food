@@ -242,6 +242,20 @@ export function game(canvas, ctx) {
         if (!gameOver) requestAnimationFrame(animateNarutos);
      }
      
+    //  function restartGame() {
+    //     if (gameOver == true) {
+    //       game(canvas, ctx)
+    //     }
+    //  }
+
+    //  canvas.addEventListener("click", function () {
+    //    console.log(mouse.x)
+    //    console.log(mouse.y)
+
+    //    if (mouse.x > 803  && mouse.y < 415) {
+    //      restartGame()
+    //    }
+    //  })
      
      function animate() {
        ctx.clearRect(0, 0, canvas.width, canvas.height);

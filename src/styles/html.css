@@ -17,17 +17,29 @@
 }
 
 .instructions {
-    border: 2px solid gray;
+    /* border: 2px solid gray;
     border-radius: 20px;
     width: 300px;
     padding: 20px;
     margin-left: 70px;
-    /* margin: 10px; */
     color: rgb(59, 0, 168);
     font-family: sans-serif;
     font-weight: unset;
     background-color: beige;
-    position: absolute;
+    position: absolute; */
+        border: 2px solid gray;
+    border-radius: 20px;
+    /* width: 300px; */
+    padding: 20px;
+    /* margin-left: 70px; */
+    /* margin: 10px; */
+    color: rgb(59, 0, 168);
+    font-family: sans-serif;
+    /* font-weight: unset; */
+    background-color: beige;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
 }
 
 .instructions h1 {
@@ -74,17 +86,27 @@ body {
 }
 
 canvas {
-    width: 900px;
+    /* width: 900px;
     height: 600px;
     position: relative;
     left: 460px;
     bottom: 240px;
     border: 2px solid black;
+    border-radius: 10px; */
+    /* background-color: white; */
+    /* background-image: url('../images/desert.jpeg');
+    cursor: pointer; */
+    
+        width: 900px;
+    height: 600px;
+    /* position: relative; */
+    /* left: 460px; */
+    /* bottom: 240px; */
+    border: 2px solid black;
     border-radius: 10px;
     /* background-color: white; */
-    background-image: url('../images/desert.jpeg');
+    background-image: url(../images/desert.jpeg);
     cursor: pointer;
-    
 }
 
 #ramen {
@@ -128,11 +150,34 @@ canvas {
 }
 
 .social {
+        /* position: absolute; */
+    /* left: 85%; */
+    /* left: 8%; */
+    /* bottom: 53%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    border: 2px solid gray;
+    border-radius: 20px;
+    /* padding: 20px; */
+    /* margin-top: 10px; */
+    color: rgb(59, 0, 168);
+    /* font-family: sans-serif; */
+    /* font-size: 19px; */
+    background-color: beige;
+    /* margin-left: 140px; */
+    /* width: 300px; */
+    /* margin-left: 70px; */
+    /* position: relative; */
+    /* top: 550px; */
+    display: flex;
+    flex-direction: column;
+
+    /* align-items: center;
     /* position: absolute; */
     /* left: 85%; */
     /* left: 8%; */
     /* bottom: 53%; */
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     border: 2px solid gray;
     border-radius: 20px;
@@ -146,8 +191,7 @@ canvas {
     width: 300px;
     margin-left: 70px;
     position: relative;
-    top: 550px;
-
+    top: 550px; */
 
 }
 
@@ -173,6 +217,19 @@ a:hover {
 }
 
 .instsoc {
-    position: relative;
-    bottom: 60px;
+    /* position: relative;
+    bottom: 60px; */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 750px;
+    justify-content: space-between;
+    margin-left: 70px;
+    align-items: center;
+}
+
+.everything {
+    display: flex;
+    width: 105%;
+    justify-content: space-between;
 }
