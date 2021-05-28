@@ -1,5 +1,3 @@
-import {projectiles } from './goku';
-
 class Projectile {
     constructor(x, y) {
         this.canvas = document.getElementById("canvas");

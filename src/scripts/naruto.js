@@ -1,7 +1,5 @@
 const CELLSIZE = 50;
 import { killCount } from './game';
-// const runRight = new Image();
-// runRight.src = '../src/images/run_1.png';
 
 class Naruto {
     constructor() {
@@ -40,22 +38,12 @@ class Naruto {
             this.health = Math.floor(Math.random() * 10000) + 5000;
         } 
         this.movement = this.speed;
-        // this.health = Math.floor(Math.random() * 400) + 50;
         this.maxHealth = this.health;
         this.img = document.getElementById("naruto1");
-
-        // this.runRight = runRight;
-        // this.frameX = 0;
-        // this.frameY = 0;
-        // this.minFrame = 0;
-        // this.maxFrame = 4;
-        // this.spriteWidth = 90;
-        // this.spriteHeight = 117
         
     }
 
     move() {
-        // this.y += 1;
         if (this.x >= 0 && this.x <= CELLSIZE*15 && this.y === 0) {
             this.x += this.movement
         }
@@ -83,15 +71,12 @@ class Naruto {
         if (this.y === CELLSIZE*8 && this.x <= CELLSIZE*12  && this.x >= CELLSIZE*6) {
             this.x -= this.movement
         }
-
-        // if (this.frameX < this.maxFrame) this.frameX++;
-        // else this.frameX = this.minFrame;
     
     }
 
     draw() {
-         this.ctx.shadowColor = "red";
-         this.ctx.shadowBlur = 15;
+        this.ctx.shadowColor = "red";
+        this.ctx.shadowBlur = 15;
         this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
 
         this.ctx.fillStyle = "blue";
