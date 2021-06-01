@@ -14,6 +14,7 @@ export function game(canvas, ctx) {
   const shenron = document.getElementById('shenron')
   const broly = document.getElementById('broly')
   const coming = document.getElementById('coming')
+  const restart = document.getElementById('restart')
 
   const CELLSIZE = 50;
   const GAMEGRID = [];
@@ -208,18 +209,19 @@ export function game(canvas, ctx) {
      ctx.drawImage(
        goku2,
        830,
-       250,
+       200,
        39,
        49
      );
 
      ctx.shadowBlur = 0
      
-     ctx.drawImage(coming, 809, 360, 80, 37);
+     ctx.drawImage(coming, 809, 360+50, 80, 37);
 
-     ctx.drawImage(itachi, 803, 415, 40, 50);
-     ctx.drawImage(broly, 853, 415, 40, 50);
-     ctx.drawImage(shenron, 809, 490, 80, 50);
+     ctx.drawImage(itachi, 803, 415+50, 40, 50);
+     ctx.drawImage(broly, 853, 415+50, 40, 50);
+     ctx.drawImage(shenron, 809, 490+50, 80, 50);
+     ctx.drawImage(restart, 810, 310, 80, 40);
   }
 
 
@@ -229,6 +231,11 @@ export function game(canvas, ctx) {
   }
   
 
+  canvas.addEventListener('click', function() {
+    if (mouse.x >= 810 && mouse.x < 890 && mouse.y >= 310 && mouse.y <= 350) {
+      location.reload();
+    }
+  })
 
   
   function animate() {
